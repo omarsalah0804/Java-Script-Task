@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>task 1</title>
+  <style>
+    .box {
+        border: 1px solid black;
+      width: 200px;
+      height: 200px;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="box" onmouseover="changeColor(this)" onmouseout="resetColor(this)"></div>
+
+  <script>
+    function changeColor(element) {
+      element.style.backgroundColor = 'blue';
+    }
+
+    function resetColor(element) {
+      element.style.backgroundColor = 'white';
+    }
+  </script>
+</body>
+</html>

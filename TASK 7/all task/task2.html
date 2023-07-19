@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>task 2</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 50px;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 23px;
+      font-weight: normal;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div class="box" onmouseover="changeColor(this)" onmouseout="resetColor(this)">Hello World!</div>
+
+  <script>
+    function changeColor(element) {
+      element.style.backgroundColor = 'yellow';
+      element.style.fontSize = '24px';
+      element.style.fontWeight = 'bold';
+    }
+
+    function resetColor(element) {
+      element.style.backgroundColor = 'white';
+      element.style.fontSize = '23px';
+      element.style.fontWeight = 'normal';
+    }
+  </script>
+</body>
+</html>
