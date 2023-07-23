@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sign-up.css">
+</head>
+<body>
+  <div class="animated-background">
+   <div class="sign-up">
+    <form>
+        <label for="fName">first Name</label><br/>
+        <input type="text" id="fName"/><br/>
+        <p id="fNameP" class="invalid"> <b>letters</b> Only (3 leters minimum)</p> 
+
+
+        <label for="lName">Last Name</label><br/>
+        <input type="text" id="lName"/><br/>
+        <p id="lNameP" class="invalid"> <b>letters</b> Only (3 leters minimum)</p> 
+
+
+
+        <label for="email">Email</label><br/>
+        <input type="email" id="email"/><br/>
+        <p id="emailP" class="invalid"> <b>example@mail.com</b></p> 
+
+
+        <label for="confEmail">Confirm Email</label><br/>
+        <input type="email" id="confEmail"/><br/>
+        <p id="confEmailP" class="invalid"> <b>Must Match with E-mail</b></p> 
+
+
+        <label for="password">Password</label><br/>
+        <input type="password" id="password"/><br/>
+        <!-- <p id="passP"></p> -->
+        <p id="capitalPass" class="invalid">Start With <b>Uppercase</b> letter</p>
+        <p id="letterPass" class="invalid"><b>lowercase</b> letter</p>
+        <p id="numberPass" class="invalid"><b>number</b></p>
+        <p id="lengthPass" class="invalid"><b>(8-32) characters</b></p>
+
+        <label for="confPassword">Confirm Password</label><br/>
+        <input type="password" id="confPassword"/><br/>
+        <p id="confPassP" class="invalid"> <b>Must Match with Password</b></p><br/>
+
+
+        <label for="requiredPosition">required Position</label><br/>
+        <select name="requiredPosition" id="requiredPosition" >
+            <option value="SelectPosition" selected disabled>Select position</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="Javascritp">Javascritp</option>
+        </select><br/>
+        <p id="selectP" class="invalid"><b>invalid Selection</b></p><br/>
+        <button id="buttonID" type="submit" value="submit"><span>Sign Up</span></button>
+    </form>
+   </div>
+  </div>
+</body>
+    <script src="./task_1.js"></script>
+
+</html>

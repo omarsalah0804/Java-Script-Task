@@ -1,0 +1,146 @@
+ .animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(45deg, #7e98f5, #ffffff , rgb(194, 210, 255));
+    background-size: 400% 400%;
+    animation: animateBackground 10s ease infinite;
+  }
+   .welcomeP{
+    font-size: 30px;
+    font-weight: bold;
+  } 
+   @keyframes animateBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }  
+
+
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    content: "✖ ";
+    }
+.logo-img img{
+    height: 60px;
+}
+.logo-img{
+    height: 60px;
+}
+.login-section {
+    width: 40%;
+    margin:0 auto;
+    border: 4px solid #A076F9;
+    border-radius: 30px;
+    height: 590px;
+}
+.img-login img{
+    display: block;
+    margin:0 auto;
+    height: 200px;
+}
+.img-login{
+    height: 200px;
+}
+
+
+
+.form-login form{
+    width: 70%;
+    margin:0 auto ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-login label{
+    color: #6528F7;
+    font-size: 2em;
+}
+
+.input-login{
+    border: 2px solid #6528F7; 
+     border-radius: 8px;
+     width: 100%;
+     text-align: center;
+     height: 3em;
+     font-size: 15px;
+     background-color: #EDE4FF;
+}
+
+.input-login:focus {
+    border: 3px solid #6528f7;
+    background-color: #EDE4FF;
+}
+
+.form-login button {
+    display: inline-block;
+    border-radius: 9px;
+    background-color: #6528F7;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 10px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .form-login button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .form-login button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .form-login button:hover span {
+    padding-right: 25px;
+  }
+  
+  .form-login button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+  @media (min-width:300px) and (max-width:900px){
+    .login-section{
+        width:70%;
+    }
+  }
+  @media (max-width:299.9px){
+    .login-section{
+        width:90%;
+    }
+    .img-login{
+        height: 200px;
+    }
+    .img-login img{
+        height:200px;
+    }
+    .login-section{
+        height: 585px;
+    }
+  }

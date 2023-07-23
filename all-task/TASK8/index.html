@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Registration Form</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Registration Form</h1>
+    <form>
+      <div class="form-group">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+      </div>
+      <div class="form-group">
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+      </div>
+      <div class="form-group">
+        <label for="birth-date">Birth Date:</label>
+        <input type="date" id="birth-date" name="birth-date" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="confirm-email">Confirm Email:</label>
+        <input type="email" id="confirm-email" name="confirm-email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+      </div>
+      <div class="form-group">
+        <label for="tel">Phone Number:</label>
+        <input type="tel" id="tel" name="tel" required>
+      </div>
+      <button type="submit" onclick="validateNames()">Register</button>
+    </form>
+  </div>
+</body>
+<script>
+    function validateNames() {
+      const firstNameInput = document.getElementById("first-name");
+      const lastNameInput = document.getElementById("last-name");
+      
+      const firstName = firstNameInput.value.trim();
+      const lastName = lastNameInput.value.trim();
+      
+      if (!isValidName(firstName)) {
+        alert("Invalid First Name. First Name should contain only letters.");
+        firstNameInput.focus();
+        return;
+      }
+      
+      if (!isValidName(lastName)) {
+        alert("Invalid Last Name. Last Name should contain only letters.");
+        lastNameInput.focus();
+        return;
+      }
+      
+      alert("Registration successful!");
+    }
+
+    function isValidName(name) {
+      const nameRegex = /^[a-zA-Z]+$/;
+      return nameRegex.test(name);
+    }
+  </script>
+  
+</html>
