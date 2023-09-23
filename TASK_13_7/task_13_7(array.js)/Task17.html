@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+    function aveArrayFunction(ar) {
+    return ar.reduce((a, b) => a + b) / ar.length
+  }
+  function aveArrayForLoop(ar) {
+    let sum = 0;
+    for (let i in ar)
+      sum += ar[i]
+    //or 
+    sum = sumArrayFunction(ar)
+    return sum / ar.length
+  }
+  function aveArrayWhileLoop(ar) {
+    let sum = 0;
+    let i = -1
+    while (++i < ar.length)
+      sum += ar[i]
+    //or 
+    sum = sumArrayFunction(ar)
+    return sum / ar.length
+  }
+
+</script>
+</html>

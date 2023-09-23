@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+    function removeFromArrayForLoop(ar, n) {
+    for (let i in ar)
+      if (ar[i] === n)
+        ar.splice(i, 1)
+    return ar
+  }
+  function removeFromArrayWhileLoop(ar, n) {
+    let index = -1
+    while (++index < ar.length)
+      if (ar[index] === n)
+        ar.splice(index, 1)
+    return ar
+  }
+  function removeFromArrayFunction(ar, n) {
+    ar = ar.filter(e => e != n)
+    return ar
+  }
+
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+    function evenNumberEvenIndexFunction(ar) {
+    return ar.filter((e, i) => e % 2 == 0 && i % 2 == 0 && i != 0)
+  }
+  function evenNumberEvenIndexForLoop(ar) {
+    let newAr = []
+    for (let i in ar)
+      if (ar[i] % 2 == 0 && i % 2 == 0 && i != 0)
+        newAr.push(ar[i])
+    return newAr
+  }
+  function evenNumberEvenIndexWhileLoop(ar) {
+    let newAr = []
+    let i = -1
+    while (++i < ar.length)
+      if (ar[i] % 2 == 0 && i % 2 == 0 && i != 0)
+        newAr.push(ar[i])
+    return newAr
+  }
+</script>
+</html>

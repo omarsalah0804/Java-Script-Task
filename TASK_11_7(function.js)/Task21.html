@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 4rem;
+  }
+
+  label {
+    font-size: 14px;
+  }
+</style>
+<!-- Drifting - NF -->
+<body>
+  <div>
+    <label for="range">Enter the range you want </label>
+    <input type="text" id="range" placeholder="Ex'min , max'">
+    <button onclick="genRandom()">Generate a random number</button>
+  </div>
+  <div>
+    <p class="result"></p>
+  </div>
+</body>
+<script defer>
+  //with bulit in function
+  function randomNumber(s , e){
+    console.log(e - s);
+    return Math.random() * (e - s) + s
+  }
+
+  //without bulit in function
+  function randomNumber2(s ,e){
+    let a = new Date().getTime()
+    let randint = ( (a * 89343208) * 123 / 324 ) % 99999
+    return randint / 99999 * (e - s) + s
+  }
+
+  function genRandom() {
+    let n = document.querySelector('#range').value.split(',').map(e => e.trim()).map(Number)
+    document.querySelector('.result').textContent = randomNumber2(n[0] , n[1])
+  }
+</script>
+
+</html>

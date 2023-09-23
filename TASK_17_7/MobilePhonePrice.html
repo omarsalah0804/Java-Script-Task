@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+    <title>phone Store</title>
+    <style>
+      .PhoneType{
+        display: none;
+      }
+      .submitBtn{
+        display: none;
+      }
+      .inputDiv{
+        display: block;
+      }
+      #tableCon {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#headTa {
+  background-color: #f2f2f2;
+}
+
+#headTa th {
+  padding: 10px;
+  text-align: left;
+}
+
+#boadTa td, #boadTa th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#boadTa tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#boadTa tr:hover {
+  background-color: #ddd;
+}
+
+    </style>
+</head>
+<body >
+  <section class="contaner">
+      <div class="divForm">
+        <form action="" id="mobForm">
+          <fieldset>
+            <legend>Mobile Form</legend>
+            <div class="inputDiv">
+              <label for="" id="userName">Client Name</label>
+              <br><input type="text" name="useName">
+              <br><br>
+            </div>
+            <div class="PhoneType">
+                  <label for="" id="devisType">Chosse the Phone Type</label><br>
+            <select name="typeNameD" id="typeName" >
+                <option selected value="sselect">select</option>
+                <option value="samsung">samsung</option>
+                <option value="apple">apple</option>
+                <option value="Huawi">Huawi</option>
+            </select>
+            <br><br>
+          </div>
+          <div class="submitBtn">
+            <button type="submit" class="submit">add device</button> 
+          </div>
+            </fieldset>
+          </form>
+      </div>
+      <div class="divTable">
+        <table id="tableCon">
+          <thead id="headTa"></thead>
+          <tbody id="boadTa"></tbody>
+        </table>
+
+      </div>
+  </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

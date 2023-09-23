@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+    function shorterInArrayFunction(str) {
+    return str[str.map(e => e.length).indexOf(Math.min(...(str.map(e => e.length))))]
+  }
+  function shorterInArrayFunction2(str) {
+    return str.reduce((a, b) => a.length < b.length ? a : b, str[0])
+  }
+  function shorterInArrayForLoop(str) {
+    let shortest = str[0];
+    for (let i in str)
+      if (str[i].length < shortest.length)
+        shortest = str[i]
+    return shortest
+  }
+  function shorterInArrayWhileLoop(str) {
+    let shortest = str[0];
+    let i = -1
+    while (++i < str.length)
+      if (str[i].length < shortest.length)
+        shortest = str[i]
+    return shortest
+  }
+
+
+</script>
+</html>

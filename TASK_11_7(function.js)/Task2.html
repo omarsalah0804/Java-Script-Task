@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 4rem;
+  }
+
+  label {
+    font-size: 14px;
+  }
+</style>
+
+<body>
+  <div>
+    <label for="Age">dogs age in our years</label>
+    <input type="text" id="Age">
+    <button onclick="calculateDogAgelancher()">Submit</button>
+  </div>
+  <div>
+    <p class="result"></p>
+  </div>
+</body>
+<script defer>
+  function calculateDogAge(n) {
+    return `Your doggie is ${n * 7} years old in dog years`
+  }
+  function calculateDogAgelancher() {
+    document.querySelector('.result').textContent = calculateDogAge(document.querySelector('#Age').value)
+  }
+</script>
+
+</html>
+
+<!-- 2
+Write a function named calculateDogAge that:
+takes 1 argument: your puppy's age.
+calculates your dog's age based on the conversion
+rate of 1 human year to 7 dog years.
+outputs the result to the screen like so:
+"Your doggie is NN years old in dog years!"
+
+Ex: calculateDogAge(1);
+=> "Your doggie is 7 years old in dog years!" -->

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1rem;
+  }
+
+  h5 {
+    text-align: center;
+  }
+  button{
+    height: 40px;
+    width: 20%;
+    border-radius: 10px;
+    border: 0;
+    background-color: aliceblue;
+    transition: .5s;
+  }
+  button:hover{
+    background-color: rgb(210, 209, 209);
+  }
+  input{
+    width: 60%;
+    height: 40px;
+    text-align: center;
+  }
+</style>
+<body>
+  <h3>Task no.2</h3>
+  <button id="CopyText" onclick="Copy()">Click To copy the Important text!</button><br>
+  <label for="try">Now try to paste it here or somewhere</label><br>
+  <input type="text" name="try">
+  
+</body>
+<script>
+ function Copy(){
+    navigator.clipboard.writeText('NevEr gOnNa GivE yOu uP nEVer gOnNa LeT yOu doWN')
+  }
+
+</script>
+</html>

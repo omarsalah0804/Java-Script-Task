@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Task 14</h1>
+    <script>
+       function longerString(str1, str2, str3, str4) {
+  var longestString = str1;
+
+  if (str2.length > longestString.length) {
+    longestString = str2;
+  }
+
+  if (str3.length > longestString.length) {
+    longestString = str3;
+  }
+
+  if (str4.length > longestString.length) {
+    longestString = str4;
+  }
+
+  return longestString;
+}
+        let a = prompt("Enter the first string :");
+        let b = prompt("Enter the second string :");
+        let c = prompt("Enter the thaird string :");
+        let d = prompt("Enter the forth string :");
+        console.log(longerString(a,b,c,d));
+    </script>
+</body>
+</html>

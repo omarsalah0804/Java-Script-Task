@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 4rem;
+  }
+
+  label {
+    font-size: 14px;
+  }
+</style>
+<!-- Chasing_(Demo) -->
+<body>
+  <div>
+    <label for="numbers">Enter 5 numebrs spareted by spaces</label>
+    <input type="text" id="numbers" placeholder="u got problems?">
+    <button onclick="NumberChekerr()">Submit</button>
+  </div>
+  <div>
+    <p class="result"></p>
+  </div>
+</body>
+<script defer>
+  //i here by declare that i had nothing to do with this and i was forced to do it like this
+  function average(n1 , n2 , n3 , n4 , n5) {
+    return (n1 + n2 + n3 + n4 + n5 ) /5
+  }
+  //now this is what an avg looks like
+  function avg(n){
+    let sum = 0
+    for( let i in n){
+      sum += n[i];
+    }
+    return sum / n.length
+  }
+  function NumberChekerr() {
+    let n = document.querySelector('#numbers').value.split(' ').map(Number)
+    document.querySelector('.result').textContent = average(n[0] ,n[1] , n[2] , n[3] ,n[4])
+  }
+</script>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task 12</h1>
+    <script>
+        function smallerNubmer (num1,num2,num3){
+            if(num1<num2 && num1<num3){
+                return num1;
+            }
+            else if(num2<num1 && num2<num3){
+                return num2;
+            }
+            else{
+                return num3;
+            }
+
+        }
+        let num1=Number(prompt("Enter the frist number..."));
+        let num2=Number(prompt("Enter the second number..."));
+        let num3=Number(prompt("Enter the 3rd number..."));
+        let result=smallerNubmer(num1,num2,num3);
+        console.log(`The smaller number is ${result}`);
+    </script>
+</body>
+</html>

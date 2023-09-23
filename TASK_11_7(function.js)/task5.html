@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1rem;
+  }
+
+  hr {
+    padding: 0;
+    margin: 0;
+  }
+
+  label {
+    font-size: 14px;
+  }
+</style>
+
+<body>
+  <div>
+    <pre class="result"></pre>
+  </div>
+</body>
+<script defer>
+  document.querySelector('.result').innerHTML = `
+  what is the error:
+      function double(cat) {
+        return 2 * x;
+      }
+      x is not defined and car is not used
+
+      the correct: 
+      function double(cat = 0) {
+        return 2 * cat;
+        //assuming cat is a number
+      }
+      </pre>
+      <pre>
+      <hr>
+      function double(7) {
+        return 2 * 7;
+      }
+      its a static function which defy its purpose  and would be useless brcause it always takes 7 as parameter
+
+      the correct: 
+      function double(x = 0) {
+        return 2 * x;
+        //assuming x is a number
+      }
+    </pre>
+      <pre>
+      <hr>
+      function double('7') {
+        return 2 * 'x';
+      }
+      1) it static again where this time it takes a string instad of a number
+      2) x here is a string and not a variable which will give always give NAN as a result 
+      `
+</script>
+
+</html>

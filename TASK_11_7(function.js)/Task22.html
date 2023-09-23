@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 4rem;
+  }
+
+  label {
+    font-size: 14px;
+  }
+</style>
+<!-- MISTAKE - NF -->
+<body>
+  <div>
+    <label for="number">Enter your university score </label>
+    <input type="text" id="number" placeholder="if <= 50 dont bother">
+    <button onclick="NumberChekerr()">Submit</button>
+  </div>
+  <div>
+    <p class="result"></p>
+  </div>
+</body>
+<script defer>
+  function scoreInUniversty(n) {
+    let result = "A"
+    if(n >= 95)
+      result = "A"
+    else if(n >= 85)
+      result = "B"
+    else if(n >= 70)  
+      result = "C"
+    else if(n >= 50)  
+      result = "D"
+    else
+      result = "F"
+    
+    return result;
+  }
+
+  function NumberChekerr() {
+    let n = Number(document.querySelector('#number').value)
+    document.querySelector('.result').textContent = `Your score in university is : ${scoreInUniversty(n)}`
+    }
+</script>
+
+</html>

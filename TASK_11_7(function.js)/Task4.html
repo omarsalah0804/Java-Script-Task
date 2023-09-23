@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 4rem;
+  }
+
+  label {
+    font-size: 14px;
+  }
+</style>
+
+<body>
+  <div>
+    <label for="name">Enter your name</label>
+    <input type="text" id="name">
+    <button onclick="greating()">Submit</button>
+  </div>
+  <div>
+    <p class="result"></p>
+  </div>
+</body>
+<script defer>
+  function great(name) {
+    if (name === 'alaa' || name === "ala'a" || name === "mona")
+      return `Hello cotch ${name}!`
+    else
+      return `Hello ${name}!`
+  }
+  function greating() {
+    let name = document.querySelector('#name').value;
+    console.log(great(name));
+    document.querySelector(".result").textContent = great(name);
+  }
+</script>
+
+</html>
+
+<!-- 
+  
+/*
+4
+Write a function called greet that:
+takes 1 argument: name.
+and it will return hello + name
+
+Ex: greet("Adam")
+=> "Hello Adam"
+*/
+ -->

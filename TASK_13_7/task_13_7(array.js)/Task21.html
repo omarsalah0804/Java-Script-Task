@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+    function powerElementIndexFunction(ar) {
+    return ar.map((e, i) => e ** i)
+  }
+  function powerElementIndexForLoop(ar) {
+    for (let i in ar)
+      ar[i] = ar[i] ** i
+    return ar
+  }
+  function powerElementIndexWhileLoop(ar) {
+    let i = -1
+    while (++i < ar.length)
+      ar[i] = ar[i] ** i
+    return ar
+  }
+
+</script>
+</html>

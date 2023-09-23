@@ -1,59 +1,755 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>java script</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="./photo/js.jpg">
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JAVA SCRIPT</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" href="./js.png" />
 </head>
+
 <body>
-    <section class="all-task">
-        <h2 class="header">"TASKS"</h2>
-          <p class="name">Omar Khaled Salah</p>
-        <div class="content" style="display: flex">
+  <!-- nav  -->
+  <div class="navbar">
+    <div class="nav">
+      <div class="nav__item">
+        <a class="link" href="http://127.0.0.1:5501/index.html">
+          <svg class="icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="5.902 27.201 3.655 2 28.345 2 26.095 27.197 15.985 30 5.902 27.201"
+              style="fill: #e44f26" />
+            <polygon points="16 27.858 24.17 25.593 26.092 4.061 16 4.061 16 27.858" style="fill: #f1662a" />
+            <polygon
+              points="16 13.407 11.91 13.407 11.628 10.242 16 10.242 16 7.151 15.989 7.151 8.25 7.151 8.324 7.981 9.083 16.498 16 16.498 16 13.407"
+              style="fill: #ebebeb" />
+            <polygon
+              points="16 21.434 15.986 21.438 12.544 20.509 12.324 18.044 10.651 18.044 9.221 18.044 9.654 22.896 15.986 24.654 16 24.65 16 21.434"
+              style="fill: #ebebeb" />
+            <polygon
+              points="15.989 13.407 15.989 16.498 19.795 16.498 19.437 20.507 15.989 21.437 15.989 24.653 22.326 22.896 22.372 22.374 23.098 14.237 23.174 13.407 22.341 13.407 15.989 13.407"
+              style="fill: #fff" />
+            <polygon
+              points="15.989 7.151 15.989 9.071 15.989 10.235 15.989 10.242 23.445 10.242 23.445 10.242 23.455 10.242 23.517 9.548 23.658 7.981 23.732 7.151 15.989 7.151"
+              style="fill: #fff" />
+          </svg>
+          <span  class="text" data-title="HTML/CSS">HTML</span>
+        </a>
+      </div>
+
+      <div class="nav__item">
+        <a class="active link" href="http://127.0.0.1:5500/index.html">
+          <svg class="icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="28" height="28" style="fill: #f5de19" />
+            <path
+              d="M20.809,23.875a2.866,2.866,0,0,0,2.6,1.6c1.09,0,1.787-.545,1.787-1.3,0-.9-.716-1.222-1.916-1.747l-.658-.282c-1.9-.809-3.16-1.822-3.16-3.964,0-1.973,1.5-3.476,3.853-3.476a3.889,3.889,0,0,1,3.742,2.107L25,18.128A1.789,1.789,0,0,0,23.311,17a1.145,1.145,0,0,0-1.259,1.128c0,.789.489,1.109,1.618,1.6l.658.282c2.236.959,3.5,1.936,3.5,4.133,0,2.369-1.861,3.667-4.36,3.667a5.055,5.055,0,0,1-4.795-2.691Zm-9.295.228c.413.733.789,1.353,1.693,1.353.864,0,1.41-.338,1.41-1.653V14.856h2.631v8.982c0,2.724-1.6,3.964-3.929,3.964a4.085,4.085,0,0,1-3.947-2.4Z" />
+          </svg>
+          <span class="text" data-title="JAVA SCRIPT">JS</span>
+        </a>
+      </div>
+
+      <div class="nav__item">
+        <a class="link">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path fill="#000000"
+              d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6M12,13C14.67,13 20,14.33 20,17V20H4V17C4,14.33 9.33,13 12,13M12,14.9C9.03,14.9 5.9,16.36 5.9,17V18.1H18.1V17C18.1,16.36 14.97,14.9 12,14.9Z" />
+          </svg>
+          <span class="text" data-title="Three">Three</span>
+        </a>
+      </div>
+
+      <div class="nav__item">
+        <a class="link">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path fill="#000000"
+              d="M12,18.54L19.37,12.8L21,14.07L12,21.07L3,14.07L4.62,12.81L12,18.54M12,16L3,9L12,2L21,9L12,16M12,4.53L6.26,9L12,13.47L17.74,9L12,4.53Z" />
+          </svg>
+          <span class="text" data-title="Four">Four</span>
+        </a>
+      </div>
+
+      <div class="nav__item">
+        <a class="link">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path fill="#000000"
+              d="M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10M10,22C9.75,22 9.54,21.82 9.5,21.58L9.13,18.93C8.5,18.68 7.96,18.34 7.44,17.94L4.95,18.95C4.73,19.03 4.46,18.95 4.34,18.73L2.34,15.27C2.21,15.05 2.27,14.78 2.46,14.63L4.57,12.97L4.5,12L4.57,11L2.46,9.37C2.27,9.22 2.21,8.95 2.34,8.73L4.34,5.27C4.46,5.05 4.73,4.96 4.95,5.05L7.44,6.05C7.96,5.66 8.5,5.32 9.13,5.07L9.5,2.42C9.54,2.18 9.75,2 10,2H14C14.25,2 14.46,2.18 14.5,2.42L14.87,5.07C15.5,5.32 16.04,5.66 16.56,6.05L19.05,5.05C19.27,4.96 19.54,5.05 19.66,5.27L21.66,8.73C21.79,8.95 21.73,9.22 21.54,9.37L19.43,11L19.5,12L19.43,13L21.54,14.63C21.73,14.78 21.79,15.05 21.66,15.27L19.66,18.73C19.54,18.95 19.27,19.04 19.05,18.95L16.56,17.95C16.04,18.34 15.5,18.68 14.87,18.93L14.5,21.58C14.46,21.82 14.25,22 14,22H10M11.25,4L10.88,6.61C9.68,6.86 8.62,7.5 7.85,8.39L5.44,7.35L4.69,8.65L6.8,10.2C6.4,11.37 6.4,12.64 6.8,13.8L4.68,15.36L5.43,16.66L7.86,15.62C8.63,16.5 9.68,17.14 10.87,17.38L11.24,20H12.76L13.13,17.39C14.32,17.14 15.37,16.5 16.14,15.62L18.57,16.66L19.32,15.36L17.2,13.81C17.6,12.64 17.6,11.37 17.2,10.2L19.31,8.65L18.56,7.35L16.15,8.39C15.38,7.5 14.32,6.86 13.12,6.62L12.75,4H11.25Z" />
+          </svg>
+          <span class="text" data-title="Five">Five</span>
+        </a>
+      </div>
+
+      <div class="nav__active-indicator"></div>
+    </div>
+  </div>
+
+  <!-- nav  -->
+
+  <div class="taskContainer">
+    <div class="DateSection">
+      <input type="checkbox" name="d10m7" id="d10m7ck" />
+      <label for="d10m7ck" class="label">
+        <div class="date">"2023/07/9"</div>
+        <div class="icon">▼</div>
+      </label>
+      <div class="tasks">
+        <a href="./TASK_9_7/task1.html" target="_blank">
           <div class="task">
-            <div class="task-link">
-              <a href="./all-task/TASK1/index.html" target="_blank">task 1</a>
-            </div>
+            <div class="name"><span>Task no.1</span></div>
           </div>
+        </a>
+        <a href="./TASK_9_7/task2.html" target="_blank">
           <div class="task">
-            <div class="task-link">
-              <a href="./all-task/TASK2/index.html" target="_blank">task 2</a>
-            </div>
+            <div class="name"><span>Task no.2</span></div>
           </div>
+        </a>
+        <a href="./TASK_9_7/task3.html" target="_blank">
           <div class="task">
-            <div class="task-link">
-              <a href="./all-task/TASK3/index.html" target="_blank">task 3</a>
-            </div>
+            <div class="name"><span>Task no.3</span></div>
           </div>
+        </a>
+        <a href="./TASK_9_7/task4.html" target="_blank">
           <div class="task">
-            <div class="task-link">
-              <a href="./all-task/TASK4/index.html" target="_blank">task 4</a>
-            </div>
+            <div class="name"><span>Task no.4</span></div>
           </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="taskContainer">
+    <div class="DateSection">
+      <input type="checkbox" name="d10m7" id="d10m7ck" />
+      <label for="d10m7ck" class="label">
+        <div class="date">"2023/07/10"</div>
+        <div class="icon">▼</div>
+      </label>
+      <div class="tasks">
+        <a href="./TASK_10_7/task1.html" target="_blank">
           <div class="task">
-            <div class="task-link">
-              <a href="./all-task/TASK5/index.html" target="_blank">task 5</a>
-            </div>
+            <div class="name"><span>Task no.1</span></div>
           </div>
+        </a>
+        <a href="./TASK_10_7/task2.html" target="_blank">
           <div class="task">
-            <div class="task-link">
-              <a href="./all-task/TASK6/index.html" target="_blank">task 6</a>
-            </div>
+            <div class="name"><span>Task no.2</span></div>
           </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="taskContainer">
+    <div class="DateSection">
+      <input type="checkbox" name="d10m7" id="d10m7ck" />
+      <label for="d10m7ck" class="label">
+        <div class="date">"2023/07/11" function.JS</div>
+        <div class="icon">▼</div>
+      </label>
+      <div class="tasks">
+        <a href="./TASK_11_7(function.js)/Task1.html" target="_blank">
           <div class="task">
-            <div class="task-link">
-              <a href="./all-task/TASK7/" target="_blank">task 7</a>
-            </div>
+            <div class="name"><span>Fortune Teller </span></div>
           </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/Task2.html" target="_blank">
           <div class="task">
-            <div class="task-link">
-              <a href="./all-task/TASK8/index.html" target="_blank">task 8</a>
-            </div>
+            <div class="name"><span>dog years</span></div>
           </div>
-        </div>
-      </section>
+        </a>
+        <a href="./TASK_11_7(function.js)/Task3.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Supplies for life</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/Task4.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>greetings</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/task5.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>errors</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/Task6.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>errors but fixed</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/task7.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>The cube</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/Task8.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>multipler</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/Task9.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Drivers license</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/Task10.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Strings length</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/Task11.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Larger Nubmer</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/Task12.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Smaller Nubmer</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/Task13.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Shortest String</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/Task14.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Longest String</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/Task15.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>isEven ?</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/Task16.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>IsOdd ?</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/Task17.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Absolute value</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/Task18.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>FullName (dont ask me)</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/Task19.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Average</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/Task20.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Random Number</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/Task21.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Random Number in range</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/Task22.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Uni score ....</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7(function.js)/Task23&24.html" target="_blank">
+          <div class="intresting task">
+            <div class="name"><span>Counter</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="taskContainer">
+    <div class="DateSection">
+      <input type="checkbox" name="d10m7" id="d10m7ck" />
+      <label for="d10m7ck" class="label">
+        <div class="date">"2023/07/11" function.team</div>
+        <div class="icon">▼</div>
+      </label>
+      <div class="tasks">
+        <a href="./TASK_11_7_TEAM(function.js)/task1.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.1</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task2.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.2</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task3.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.3</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task4.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.4</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task5.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.5</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task6.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.6</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task7.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.7</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task8.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.8</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task9.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.9</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task10.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.10</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task11.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.11</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task12.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.12</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task13.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.13</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task14.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.14</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task15.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.15</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task16.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.16</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task17.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.17</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task18.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.18</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task19.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.19</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task20.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.20</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task21.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.21</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task22.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.22</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task23.html" target="_blank">
+          <div class="intresting task">
+            <div class="name"><span>Task no.23</span></div>
+          </div>
+        </a>
+        <a href="./TASK_11_7_TEAM(function.js)/task24.html" target="_blank">
+          <div class="intresting task">
+            <div class="name"><span>Task no.24</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="taskContainer">
+    <div class="DateSection">
+      <input type="checkbox" name="d10m7" id="d10m7ck" />
+      <label for="d10m7ck" class="label">
+        <div class="date">"2023/07/13"</div>
+        <div class="icon">▼</div>
+      </label>
+      <div class="tasks">
+        <a href="./TASK_13_7/Task1.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.1</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/Task2.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.2</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/Task3.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.3</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="taskContainer">
+    <div class="DateSection">
+      <input type="checkbox" name="d10m7" id="d10m7ck" />
+      <label for="d10m7ck" class="label">
+        <div class="date">"2023/07/13" array.js</div>
+        <div class="icon">▼</div>
+      </label>
+      <div class="tasks">
+        <a href="./TASK_13_7/task_13_7(array.js)/Task1.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.1</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task2.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.2</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task3.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.3</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task4.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.4</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task5.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.5</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task6.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.6</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task7.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.7</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task8.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.8</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task9.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.9</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task10.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.10</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task11.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.11</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task12.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.12</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task13.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.13</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task14.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.14</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task15.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.15</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task16.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.16</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task17.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.17</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task18.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.18</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task19.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.19</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task20.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.20</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task21.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.21</span></div>
+          </div>
+        </a>
+        <a href="./TASK_13_7/task_13_7(array.js)/Task22.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.22</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="taskContainer">
+    <div class="DateSection">
+      <input type="checkbox" name="d10m7" id="d10m7ck" />
+      <label for="d10m7ck" class="label">
+        <div class="date">"2023/07/16" mapping</div>
+        <div class="icon">▼</div>
+      </label>
+      <div class="tasks">
+        <a href="./TASK_16_7.mapping/task1.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.1</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7.mapping/task2.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.2</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7.mapping/task3.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.3</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7.mapping/task4.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.4</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7.mapping/task5.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.5</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7.mapping/task6.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.6</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7.mapping/task8.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.8</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7.mapping/task9.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.9</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7.mapping/task10.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.10</span></div>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+  <div class="taskContainer">
+    <div class="DateSection">
+      <input type="checkbox" name="d10m7" id="d10m7ck" />
+      <label for="d10m7ck" class="label">
+        <div class="date">"2023/07/16" foreach</div>
+        <div class="icon">▼</div>
+      </label>
+      <div class="tasks">
+        <a href="./TASK_16_7.foreach/task1.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.1</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7.foreach/task2.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.2</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7.foreach/task3.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.3</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7.foreach/task4.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.4</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="taskContainer">
+    <div class="DateSection">
+      <input type="checkbox" name="d10m7" id="d10m7ck" />
+      <label for="d10m7ck" class="label">
+        <div class="date">"2023/07/13" (ES6).js</div>
+        <div class="icon">▼</div>
+      </label>
+      <div class="tasks">
+        <a href="./TASK_16_7(ES6)/task1.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.1</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7(ES6)/task2.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.2</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7(ES6)/task3.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.3</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7(ES6)/task4.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.4</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7(ES6)/task5.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.5</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7(ES6)/task6.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.6</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7(ES6)/task7.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.7</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7(ES6)/task8.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.8</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7(ES6)/task9.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.9</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7(ES6)/task10.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.10</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7(ES6)/task11.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.11</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7(ES6)/task12.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.12</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7(ES6)/task13.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.13</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7(ES6)/task14.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.14</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7(ES6)/task15.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.15</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7(ES6)/task16.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.16</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7(ES6)/task17.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.17</span></div>
+          </div>
+        </a>
+        <a href="./TASK_16_7(ES6)/task18.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Task no.18</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="taskContainer">
+    <div class="DateSection">
+      <input type="checkbox" name="d10m7" id="d10m7ck" />
+      <label for="d10m7ck" class="label">
+        <div class="date">"2023/07/17"</div>
+        <div class="icon">▼</div>
+      </label>
+      <div class="tasks">
+        <a href="./TASK_17_7/MobilePhonePrice.html" target="_blank">
+          <div class="task">
+            <div class="name"><span>Mobile Price</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <script src="./main.js"></script>
 </body>
+
 </html>

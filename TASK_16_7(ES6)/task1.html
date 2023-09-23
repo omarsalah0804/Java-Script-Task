@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h3>Task no.1</h3>
+  <h5>Script or console using doubleNumbers([2, 5, 100]) </h5>
+
+</body>
+<script>
+  function compareObj(obj1 , obj2){
+    let obj1keys = Object.keys(obj1);
+    let obj2keys = Object.keys(obj2);
+    for(let i in obj1keys){
+      if(!obj2keys.includes(obj1keys[i])){
+        console.log("they are not equivalent")
+        return false;
+      }
+    }
+    console.log("they are indeed equivalent")
+    return true
+  }
+
+</script>
+</html>

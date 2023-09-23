@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Task 19</h1>
+    
+</body>
+<script>
+    let num1=Number(prompt('Enter first number  :' ,'0'));
+    let num2=Number(prompt('Enter secod number  :' ,'0'));
+    let num3=Number(prompt('Enter third number  :' ,'0'));
+    let num4=Number(prompt('Enter fourth number  :' ,'0'));
+    let num5=Number(prompt('Enter fifth number  :' ,'0'));
+    const grades=[num1,num2,num3,num4,num5];
+    console.log(grades);
+    function getAvg(grades) {
+  const total = grades.reduce((acc, c) => acc + c, 0);
+  return total / grades.length;
+}
+
+   const average = getAvg(grades);
+   console.log(average);
+</script>
+</html>

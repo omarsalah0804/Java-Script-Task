@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .textbox {
+      width: 600px;
+      height: 100px;
+      border: 1px solid black;
+      word-wrap: break-word;
+      /* font-family:''; */
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .underline {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <select id="fontFamliy" name="fontFamliy">
+    <option value="Arial" selected>Arial</option>
+    <option value="Verdana">Verdana</option>
+    <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
+    <option value="Times New Roman">Times New Roman</option>
+    <option value="Courier">Courier New</option>
+  </select>
+  <select name="fontSize" id="fontSize">
+    <option value="8pt">8pt</option>
+    <option value="10pt">10pt</option>
+    <option value="12pt" selected>12pt</option>
+    <option value="14pt">14pt</option>
+    <option value="16pt">16pt</option>
+  </select>
+  <input type="checkbox" id="italic">
+  <label for="Fonttype">Italic</label>
+  <input type="checkbox" id="bold">
+  <label for="Fonttype">Bold</label>
+  <input type="checkbox" id="underline">
+  <label for="Fonttype">Underline</label>
+  
+  <br> <br>
+  <input type="text" class="textbox">
+</input>
+</body>
+<script defer>
+  let checkboxs = document.querySelectorAll('input'), fontSize = document.querySelector('#fontSize') ,fontFamliy = document.querySelector('#fontFamliy'), textDiv = document.querySelector('.textbox');
+
+  fontSize.addEventListener('change', e => changeHandler['fontSize'](e));
+  fontFamliy.addEventListener('change', e => changeHandler['fontFamliy'](e));
+
+  let changeHandler = {
+    italic: ()=> textDiv.classList.toggle('italic'),
+    bold: ()=> textDiv.classList.toggle('bold'),
+    underline:()=> textDiv.classList.toggle('underline'),
+    fontSize: (e) =>textDiv.style.fontSize = `${e.target.value}`,
+    fontFamliy: (e) => textDiv.style.fontFamily  = `${e.target.value}`
+  }
+  for (let i = 0; i < checkboxs.length; i++)
+    checkboxs[i].addEventListener('change', e => changeHandler[e.target.id]());
+
+</script>
+
+</html>

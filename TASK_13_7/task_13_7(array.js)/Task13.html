@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+    function sumArrayForLoop(ar) {
+    let sum = 0
+    for (let i in ar)
+      sum += ar[i]
+    return sum
+  }
+  function sumArrayWhileLoop(ar) {
+    let sum = 0, index = -1;
+    while (++index < ar.length - 1) {
+      sum += ar[index]
+    }
+    return sum
+  }
+  function sumArrayFunction(ar) {
+    return ar.reduce((a, b) => a + b)
+  }
+
+</script>
+</html>

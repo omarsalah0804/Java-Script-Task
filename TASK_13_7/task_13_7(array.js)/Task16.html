@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+    function oddArrayFunction(ar) {
+    ar = ar.filter(e => e % 2 != 0)
+    return ar
+  }
+  function oddArrayForLoop(ar) {
+    let odds = []
+    for (let i in ar)
+      if (ar[i] % 2 !== 0)
+        odds.push(ar[i])
+    return odds
+  }
+  function oddArrayWhileLoop(ar) {
+    let i = -1
+    let odds = []
+    while (++i < ar.length)
+      if (ar[i] % 2 !== 0)
+        odds.push(ar[i])
+    return odds
+  }
+
+</script>
+</html>

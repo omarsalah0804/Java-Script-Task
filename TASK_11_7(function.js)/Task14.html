@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 4rem;
+  }
+
+  label {
+    font-size: 14px;
+  }
+</style>
+<!-- Lost -->
+<body>
+  <div>
+    <label for="strings">Enter 4 words separated by spaces</label>
+    <input type="text" id="strings">
+    <button onclick="stringChekerr()">Submit</button>
+  </div>
+  <div>
+    <p class="result"></p>
+  </div>
+</body>
+<script defer>
+  function longerString(str1, str2, str3 , str4) {
+    let arr = [str1 ,str2 ,str3 ,str4]
+    let longest = str1;
+    for( let i = 1 ; i < arr.length ; i++)
+      if(arr[i].length > longest.length)
+        longest = arr[i];
+    return longest
+  }
+
+  // now THIS is efficient! (not perfect where ofc there is a room for improvment)
+  function BetterStringComapreing(arr){
+    let longest = arr[0];
+    for( let i = 1 ; i < arr.length ; i++)
+      if(arr[i].length > longest.length)
+        longest = arr[i];
+    return longest
+  }
+
+
+  function stringChekerr() {
+    let strings = document.querySelector('#strings').value.split(' ')
+    //see i told u ... 
+    document.querySelector('.result').textContent = longerString(strings[0], strings[1], strings[2] , strings[3])
+  }
+</script>
+
+</html>

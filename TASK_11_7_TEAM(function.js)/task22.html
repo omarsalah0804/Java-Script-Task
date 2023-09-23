@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task 22</h1>
+    <script>
+        function scoreInUniversty(num){
+            if(num<=100 && num>=95)
+            {
+                return"A";
+            }
+            else if(num<=94 && num>=85)
+            {
+                return "B";
+            }
+            else if(num<=84 && num>=70)
+            {
+                return "C";
+            }
+            else if(num<=69 && num>=50)
+            {
+                return "D";
+            }
+            else
+            {
+                return "F";
+            }
+        }
+        let avg=Number(prompt("Enter your average..."));
+        if(avg>=0 && avg<=100)
+        {
+            console.log(`Your average is ${scoreInUniversty(avg)}`);
+        }
+        else
+        {
+            console.log("Invalied Score...");
+        }
+    </script>
+</body>
+</html>

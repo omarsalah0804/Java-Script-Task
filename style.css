@@ -1,64 +1,269 @@
-* {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
+html {
     box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "Bacasime Antique", serif;
-    background-color: #fff7d4;
-
-}
-
-.all-task {
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-
-    float: left;
-}
-
-.header , .name{
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    height: 100%;
+    background: #f7c329;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  :root {
+    --active-indicator-width: 120px;
+    --icon-width: 26px;
+    --icon-margin-right: 9px;
+    --menu-padding-horizontal: 29px;
+    --menu-padding-vertical: 20px;
+    --active-indicator-extra-length: 12px;
+    /* We want the indicator to be longer than the actual buttons themselves, this length is added to both sides of the indicator */
+    --space-between-icons: 32px;
+  }
+  
+  @media (max-width: 600px) {
+    :root {
+      --active-indicator-width: 80px;
+      --icon-margin-right: 7px;
+      --menu-padding-horizontal: 24px;
+    }
+  }
+  
+  .navbar {
+    margin: 20px;
     display: flex;
+    align-items: center;
     justify-content: center;
-    color: #c07f00;
-    font-size: 2.3em;
-    font-weight: 800;
-    margin-bottom: 30px;
-}
-
-.content {
+  }
+  
+  .nav {
+    background: #fff;
+    padding: var(--menu-padding-vertical) var(--menu-padding-horizontal);
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.task {
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1);
+    border-radius: var(--active-indicator-width);
+    position: relative;
+  }
+  
+  .nav__active-indicator {
+    position: absolute;
+    top: 50%;
+    margin-left: calc(
+      var(--menu-padding-horizontal) - var(--active-indicator-extra-length)
+    );
+    left: 0;
+    transform: translateY(-50%);
+    width: calc(
+      var(--active-indicator-width) + var(--active-indicator-extra-length) * 2
+    );
+    height: calc(100% - var(--menu-padding-vertical));
+    /* background: #f7c329; */
+    z-index: 10;
+    border-radius: var(--active-indicator-width);
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .nav__item {
+    margin-left: var(--space-between-icons);
+    position: relative;
+    z-index: 20;
+  }
+  
+  .nav__item:first-child {
+    margin-left: 0;
+  }
+  
+  .link {
+    padding: 0;
+    border: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: var(--icon-width);
+    transition: width 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    /* I knowwww, don't animate width, but it doesn't actually look jittery in this case - so maybe it just works in this case? If not there are alternatives we can try */
+    outline: none;
+    position: relative;
+    background: transparent;
+  }
+  
+  .active {
+    width: var(--active-indicator-width);
+  }
+  
+  .icon {
+    display: block;
+    margin-right: var(--icon-margin-right);
+    flex-shrink: 0;
+    width: var(--icon-width);
+    height: var(--icon-width);
+  }
+  
+  .icon path {
+    fill: #a6adb1;
+    transition: fill 0.2s;
+  }
+  
+  .active .icon path {
+    fill: #000;
+  }
+  
+  .text {
+    display: block;
+    color: rgba(0, 0, 0, 0);
+    pointer-events: none;
+    font-size: 0;
+  }
+  
+  .text:after {
+    content: attr(data-title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--active-indicator-width);
+    height: 100%;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    overflow: hidden;
+    font-weight: 900;
+    color: #000;
+    padding-left: calc(var(--icon-width) + var(--icon-margin-right));
+    transition: opacity 0s;
+  }
+  
+  .slide-right .text:after {
+    left: 0;
+    right: auto;
+  }
+  
+  .slide-left .text:after {
+    right: 0;
+    left: auto;
+  }
+  
+  .active .text:after {
+    opacity: 1;
+    transition: opacity 0.4s;
+  }
+  
+  .taskContainer {
+    margin: 1rem auto;
+    width: 85%;
+  }
+  
+  .taskContainer label {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.8rem;
+    width: 30%;
+    overflow: hidden;
+    margin: 1px auto;
     background-color: #fff;
-    width: 10.25em;
-    box-shadow: 0 5px 35px rgba(1 1 1 / 20%);
-    border-radius: 10px;
-    padding: 25px;
-    margin: 15px;
-    transition: 0.7s ease;
-}
-
-.task:hover {
-    transform: scale(1.1);
-}
-
-
-.task-link {
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center !important;
+    cursor: pointer;
+  }
+  
+  .taskContainer label .icon1 {
+    font-size: medium;
+  }
+  
+  .taskContainer .tasks {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all 0.5s ease;
+  }
+  
+  .taskContainer .tasks .task {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     text-align: center;
-}
-
-.task-link a {
-    color: #c07f00;
-    font-size: 1.4em;
-    font-weight: 700;
-    margin: 10px;
-}
+    width: max(5rem, 10vw);
+    border-radius: 20px;
+    color: #fff;
+    background-color: #c07f00;
+    overflow: hidden;
+    margin-top: 1rem;
+    transition: all 0.5s ease;
+  }
+  
+  .taskContainer .tasks.active1 {
+    padding: 1rem 0;
+    height: auto;
+    visibility: visible;
+    transition: all 0.5s ease;
+  }
+  
+  .taskContainer .tasks.active1 .task {
+    height: 10vw;
+    transition: height 0.5s, box-shadow 0.3s, transform 0.3s;
+    transition: all 0.5s ease;
+  }
+  
+  .taskContainer .tasks .task:hover {
+    box-shadow: none;
+    box-shadow: 0 0 0.5rem #000000;
+    background-color: #805601;
+    /* transform: translateY(5%); */
+  }
+  
+  .taskContainer .tasks .task .name {
+    font-size: clamp(3vmin, 36px, 3vmin);
+  }
+  
+  /* golbel selectors */
+  a {
+    text-decoration: none;
+  }
+  
+  input {
+    display: none;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .nav {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .nav__active-indicator {
+      background-color: #fff;
+    }
+  
+    .taskContainer label {
+      width: 70%;
+    }
+  }
+  
+  @media only screen and (max-width: 400px) {
+    .text {
+      display: none;
+    }
+  
+    .nav__active-indicator {
+      transform: 0;
+    }
+  
+    .nav.slide-left {
+      flex-wrap: nowrap;
+      flex-direction: row;
+      overflow: hidden;
+    }
+  }
+  

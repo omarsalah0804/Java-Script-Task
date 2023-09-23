@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task  9</h1>
+    <script>
+        function canIGetADrivingLicense(age){
+            if(age>=20){
+                return"yes you can";
+            }
+            else{
+                return `please come back after ${20-age} years to get one`;
+            }}
+            let age=prompt("Please enter your age...");
+            let str1=canIGetADrivingLicense(+(age));
+            console.log("Can i get a driving license?? " +str1);
+    </script>
+</body>
+</html>

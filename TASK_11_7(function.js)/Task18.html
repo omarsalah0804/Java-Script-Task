@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 4rem;
+  }
+
+  label {
+    font-size: 14px;
+  }
+</style>
+<!--Dead and cold -->
+<body>
+  <div>
+    <label for="strings">Enter two strings separated by a space</label>
+    <input type="text" id="strings">
+    <button onclick="stringsChekcer()">Submit</button>
+  </div>
+  <div>
+    <p class="result"></p>
+  </div>
+</body>
+<script defer>
+  function fullName(str1, str2) {
+    return `${str1} ${str2}`;
+  }
+  function stringsChekcer() {
+    let strings = document.querySelector('#strings').value.split(' ')
+    document.querySelector('.result').textContent = fullName(strings[0], strings[1])
+  }
+</script>
+
+</html>
